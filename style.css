@@ -1,0 +1,131 @@
+/* This is style for the DribbbleProfile - you need to copy it to your website stylesheet */
+
+/* import Google Webfont */
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400);
+
+#container {
+    padding-top:40px;
+    width: 601px;
+    height: 300px;
+    font-size: 0;
+    margin: auto;
+}
+
+/* Player's profile (left side) */
+#container #playerProfile {
+    display: inline-block;
+    background: url(bgprof.jpg);
+    background-size: 250px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    font-size: 11px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    float: left;
+    border-right: 1px dashed lightgoldenrodyellow;
+}
+
+#container .avatar {
+    margin-top: 0px;
+    border-radius:100%;
+    border: 40px solid rgba(255, 255, 255, .25);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+    height:80px;
+    width:80px;
+}
+
+#container #name{
+    height: 28px;
+    margin-top: 14px;
+    font-size: 24px;
+    font-family: 'Raleway';
+    font-weight: 100;
+    color: white;
+}
+#check-name{height: 68px;}
+
+#container #location{
+    font-size: 14px;
+    margin-top: -18px;
+    font-family: 'Raleway';
+    font-weight: 100;
+    color: white;
+}
+
+#container i.fa-map-marker{
+    font-size: 14px;
+    padding-right: 4px;
+    border: none;
+}
+
+#container ul {
+    margin-top: 4px;
+    margin-left: -35px;
+    display: block;
+    height: 25px;
+}
+
+#container li.stat {
+    display: inline-block;
+    border-right: 1px dotted white;
+    width: 58px;
+}
+
+#container li b{
+    display: block;
+    font-family: Arial;
+    font-weight: 100;
+    color:white;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+#container .icons {
+    font-size: 19px;
+    color:white;
+    border-bottom: 4px solid rgba(255, 255, 255, .4);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+    padding-bottom: 4px;
+}
+
+#container p.back{
+    position: absolute;
+    margin-top: 76px;
+    color: rgba(255, 255, 255, .4);
+    font-size: 40px;
+    margin-left: -47px;
+}
+
+#container #border{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin-top: 119px;
+    border-radius:100%;
+    border: 3px solid rgba(255, 255, 255, .7);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+    margin-left: 57px;
+}
+
+#container li#last.stat{border-right:none !important;}
+
+
+/* Last Dribbble shot of this player */
+#container #lastShot {
+    display: inline-block;
+    float: right;
+}
+
+#container .image{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    height:300px;
+    width:400px;
+}
+
+/* The End of Dribbble Profile code */
+
