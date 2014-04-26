@@ -3,7 +3,11 @@ DribbbleProfile
 
 DribbbleProfile is a web module that showcases Dribbble player's profile together with his/her last shot.
 
-Try the [live demo](http://js.ework.me/code/dribbble-profile/) with your own dribbble profile.
+Enter your Dribbble username [here](http://js.ework.me/code/dribbble-profile/) to see how it will look like with your own profile.
+
+You can insert it in any page on your website to showcase your up-to-date profile. Here is [live demo](http://js.ework.me/about/) on Wordpress page.
+
+![](dribbble-profile.png?raw=true)
 
 I made this as a debut shot on Dribbble to give something valuable for all Dribbble players and to thank Dave Rocks for his invite.
 
@@ -17,8 +21,13 @@ This ready-to-use module features:
 - Number of your followers
 - As well as your last shot (clickable)
 
-You can insert it in any page on your website to showcase your up-to-date profile.
 
+**Dependencies:**
+- jQuery
+- jQuery UI
+- Jribbble
+
+**Dependency-free** code is avaliable [here](https://github.com/gorork/Dribbble-Profile-without-dependancies).
 
 Have fun! :)
 
