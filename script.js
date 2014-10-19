@@ -11,10 +11,10 @@ $(document).ready(function(){
 
         html.push('<div id="check-name"><h3 id="name">' + player.name + '</h3>');
         html.push('<p id="location"><i class="fa fa-map-marker"> </i> ' + player.location + '</p></div>');
-        html.push('<div id="static"><a href="' + player.url + '"><img src="' + player.avatar_url + '" class="avatar" alt=""></a>');
+        html.push('<div id="static"><a href="' + player.url + '"><img src="' + player.avatar_url + '" class="avatar" alt=""></a></div>');
         html.push('<ul><li class="stat"><i class="fa fa-dribbble icons"></i><br><b>' + player.shots_count + '</b></li>');
         html.push('<li class="stat"><i class="fa fa-heart icons"></i><br><b>' + player.likes_received_count + '</b></li>');
-        html.push('<li class="stat" id="last"><i class="fa fa-beer icons"></i><br><b>' + player.followers_count + '</b></li></ul></div>');
+        html.push('<li class="stat" id="last"><i class="fa fa-beer icons"></i><br><b>' + player.followers_count + '</b></li></ul>');
 
         $('#playerProfile').html(html.join(''));
 
