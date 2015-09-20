@@ -12,7 +12,7 @@ You can [check your profile](http://nadikun.com/code/dribbble-profile/).
 To use it, simply copy the following line of code and enter **your Dribbble username** instead of mine `rork`:
 
 ```
-    <script src="//nadikun.com/code/dribbble-profile/dp-loader.min.js" data-dribbble-id="rork" async></script>
+    <script src="//nadikun.com/code/dribbble-profile/dp-loader.js" data-dribbble-id="rork" async></script>
 ```
 
 You can insert this code on any page of your website. 

@@ -6,7 +6,7 @@
   //
   // Load stylesheet
 
-  dpAddStylesheet('//nadikun.com/code/dribbble-profile/style.min.css');
+  dpAddStylesheet('//nadikun.com/code/dribbble-profile/style.css'); // style.css
   dpAddStylesheet('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 
 

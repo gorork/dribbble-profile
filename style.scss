@@ -31,8 +31,7 @@ $profileWidth:  200px;
     display: inline-block;
     position: relative;
     background-image: linear-gradient( 325deg, #FDD99F, #B8DDD4 );
-    border-bottom-left-radius: $borderRadius;
-    border-top-left-radius: $borderRadius;
+    border-radius: $borderRadius 0 0 $borderRadius;
     width: $profileWidth;
     height: $height;
     text-align: center;
@@ -143,8 +142,7 @@ $profileWidth:  200px;
     float: right;
 
     img {
-      border-bottom-right-radius: $borderRadius;
-      border-top-right-radius: $borderRadius;
+      border-radius: 0 $borderRadius $borderRadius 0;
       height: $height;
       width: $width - $profileWidth;
     }
