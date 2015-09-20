@@ -103,6 +103,7 @@ $profileWidth:  200px;
         display: inline-block;
         border-right: 1px dotted white;
         width: 58px;
+        line-height: 1;
 
         b {
           font-size: 14px;
@@ -126,10 +127,11 @@ $profileWidth:  200px;
 
     #dp-ball{
       position: absolute;
-      top: 25px;
+      top: 70px;
       color: rgba(255, 255, 255, .4);
       font-size: 40px;
       right: 10px;
+      margin: 0;
     }
   }
 
