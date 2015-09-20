@@ -3,17 +3,17 @@
 Dribbble Profile is a web module that showcases Dribbble player's profile together with his/her last shot.
 I made this widget as [my debut shot](https://dribbble.com/shots/1452717-Freebie-Dribbble-Profile-web-module) on Dribbble to give something valuable to all Dribbble players.
 
-![Dribbble profile widget and last shot card](http://nadikun.com/public/img/dribbble-profile.png)
+![Dribbble profile widget and last shot card](http://nadikun.com/code/dribbble-profile/dribbble-profile.png)
 
 ## Usage
-
-You can [check your profile](http://nadikun.com/code/dribbble-profile/dribbble-profile.png).
 
 To use it, simply copy the following line of code and enter **your Dribbble username** instead of mine `rork`:
 
 ```
     <script src="//nadikun.com/code/dribbble-profile/dp-loader.js" data-dribbble-id="rork" async></script>
 ```
+
+Check how **your profile** would look like using [LIVE DEMO](http://nadikun.com/code/dribbble-profile/)
 
 You can insert this code on any page of your website. 
 Just paste the code to the place on a page where you'd like this widget to appear.
