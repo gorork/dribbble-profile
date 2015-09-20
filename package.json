@@ -1,0 +1,27 @@
+{
+  "name": "dribbble-profile",
+  "version": "1.0.0",
+  "description": "Profile widget with card and  for Dribbble players",
+  "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorork/DribbbleProfile.git"
+  },
+  "keywords": [
+    "dribbble",
+    "profile",
+    "widget",
+    "card",
+    "portfolio",
+    "showcase",
+    "about"
+  ],
+  "author": "Nadi Dikun <dikunn@gmail.com> (http://nadikun.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gorork/DribbbleProfile/issues"
+  },
+  "homepage": "http://nadikun.com/code/dribbble-profile/",
+  "devDependencies": {
+  }
+}

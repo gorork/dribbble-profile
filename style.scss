@@ -1,0 +1,152 @@
+// import Google Webfont
+@import url(http://fonts.googleapis.com/css?family=Raleway:200);
+
+
+$height:        300px;
+$width:         600px;
+$borderRadius:  4px;
+$profileWidth:  200px;
+
+
+//
+// Wrapper for the profile widget
+
+#dribbble-profile {
+  width: $width;
+  height: $height;
+  margin: auto;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 200;
+
+  &, b, h3 {
+    font-weight: 200;
+    color: #fff;
+  }
+
+
+  //
+  // Player's profile (left side)
+
+  #dp-left-profile {
+    display: inline-block;
+    position: relative;
+    background-image: linear-gradient( 325deg, #FDD99F, #B8DDD4 );
+    border-bottom-left-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
+    width: $profileWidth;
+    height: $height;
+    text-align: center;
+    float: left;
+
+
+    // Top profile section with name and location
+
+    #dp-profile-top {
+      height: 65px;
+
+      h3 {
+        margin: 10px 0 5px;
+        font-size: 24px;
+
+        &.font-18 { font-size: 18px; }
+        &.font-16 { font-size: 16px; }
+        &.font-14 { font-size: 14px; }
+        &.font-10 { font-size: 10px; }
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0;
+
+        &.font-12 { font-size: 12px; }
+        &.font-10 { font-size: 10px; }
+        &.font-8 { font-size: 8px; }
+
+        .fa-map-marker{
+          font-size: 14px;
+          padding-right: $borderRadius;
+          border: none;
+        }
+      }
+    }
+
+
+    // Mid profile section with photo
+
+    #dp-profile-mid {
+      position: relative;
+      height: 158px;
+
+      img {
+        border-radius: 100%;
+        border: 3px solid rgba(255, 255, 255, .7);
+        box-shadow: 0 0 0 40px rgba(255, 255, 255, .25);
+        -webkit-background-clip: padding-box; /* for Safari */
+        background-clip: padding-box;
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    // Bottom profile section with statistics
+
+    #dp-profile-bottom {
+      margin: 12px 0 0;
+      padding: 0;
+
+      .dp-stat {
+        display: inline-block;
+        border-right: 1px dotted white;
+        width: 58px;
+
+        b {
+          font-size: 14px;
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+
+        .fa {
+          font-size: 19px;
+          color: #fff;
+          border-bottom: 4px solid rgba(255, 255, 255, .4);
+          -webkit-background-clip: padding-box; /* for Safari */
+          padding-bottom: $borderRadius;
+        }
+      }
+    }
+
+    // Dribbble ball
+
+    #dp-ball{
+      position: absolute;
+      top: 25px;
+      color: rgba(255, 255, 255, .4);
+      font-size: 40px;
+      right: 10px;
+    }
+  }
+
+
+  //
+  // Last Dribbble shot of this player (right side)
+
+  #dp-right-shot {
+    display: inline-block;
+    float: right;
+
+    img {
+      border-bottom-right-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+      height: $height;
+      width: $width - $profileWidth;
+    }
+  }
+}
