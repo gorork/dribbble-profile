@@ -1,7 +1,8 @@
 (function () {
 
-  var dribbbleProfile, dribbbleId, script;
-
+  var dribbbleProfile, dribbbleId, script,
+      apiEndpoint = 'https://api.dribbble.com/v1/',
+      token = '';
 
   //
   // Load stylesheet
@@ -27,7 +28,7 @@
   //
   // Get profile details
 
-  sendJsonp('http://api.dribbble.com/players/' + dribbbleId + '?callback=displayProfile', {
+  sendJsonp(apiEndpoint + 'users/' + dribbbleId + '?callback=displayProfile&access_token=' + token, {
     callbackName: 'displayProfile',
     onSuccess: displayProfile,
     onTimeout: displayProfile,
@@ -38,7 +39,7 @@
   //
   // Get the last published shot
 
-  sendJsonp('http://api.dribbble.com/players/' + dribbbleId + '/shots?callback=displayLastShot', {
+  sendJsonp(apiEndpoint + 'users/' + dribbbleId + '/shots?callback=displayLastShot&access_token=' + token, {
     callbackName: 'displayLastShot',
     onSuccess: displayLastShot,
     onTimeout: displayLastShot,
@@ -50,23 +51,24 @@
   // Display Profile
 
   function displayProfile(response) {
-    var profileTop, profileMid, profileBottom, h3, location;
+    var profileTop, profileMid, profileBottom, h3, location,
+        data = response.data;
 
     profileTop = '<div id="dp-profile-top">' +
-                    '<h3>' + response.name + '</h3>' +
-                    '<p><i class="fa fa-map-marker"></i> ' + response.location + '</p>' +
+                    '<h3>' + data.name + '</h3>' +
+                    '<p><i class="fa fa-map-marker"></i> ' + data.location + '</p>' +
                   '</div>';
 
     profileMid = '<div id="dp-profile-mid">' +
-                    '<a href="' + response.url + '">' +
-                      '<img src="' + response.avatar_url + '" alt="">' +
+                    '<a href="' + data.html_url + '">' +
+                      '<img src="' + data.avatar_url + '" alt="">' +
                     '</a>' +
                   '</div>';
 
     profileBottom = '<ul id="dp-profile-bottom">' +
-                      '<li class="dp-stat"><i class="fa fa-dribbble"></i><br><b>' + response.shots_count + '</b></li>' +
-                      '<li class="dp-stat"><i class="fa fa-heart-o"></i><br><b>' + response.likes_received_count + '</b></li>' +
-                      '<li class="dp-stat"><i class="fa fa-hand-spock-o"></i><br><b>' + response.followers_count + '</b></li>' +
+                      '<li class="dp-stat"><i class="fa fa-dribbble"></i><br><b>' + data.shots_count + '</b></li>' +
+                      '<li class="dp-stat"><i class="fa fa-heart-o"></i><br><b>' + data.likes_received_count + '</b></li>' +
+                      '<li class="dp-stat"><i class="fa fa-hand-spock-o"></i><br><b>' + data.followers_count + '</b></li>' +
                     '</ul>';
 
     dribbbleBall = '<p id="dp-ball" class="fa fa-dribbble"></p>';
@@ -80,8 +82,8 @@
     // If name and/or location are too long,
     // reduce their font size
 
-    checkNameLength(response, h3);
-    checkLocationLength(response, location);
+    checkNameLength(data, h3);
+    checkLocationLength(data, location);
   }
 
 
@@ -89,11 +91,13 @@
   // Display last shot
 
   function displayLastShot(response) {
+    var lastShotImg, lastShotEl,
+        lastShotData = response.data[0];
 
-    var lastShotData = response.shots[0];
-    var lastShotEl = '<a href="' + lastShotData.url + '">' +
-                        '<img src="' + lastShotData.image_url + '" alt="' + lastShotData.title + '">' +
-                      '</a>';
+    lastShotImg = lastShotData.images.hidpi ? lastShotData.images.hidpi : lastShotData.images.normal;
+    lastShotEl = '<a href="' + lastShotData.html_url + '">' +
+                    '<img src="' + lastShotImg + '" alt="' + lastShotData.title + '">' +
+                  '</a>';
 
     document.getElementById('dp-right-shot').innerHTML = lastShotEl;
   }
@@ -128,7 +132,6 @@
 
   function checkLocationLength(response, el) {
     var l = response.location.length;
-    console.log('l', l);
 
     switch (true) {
       case (l > 20 && l <= 29):
@@ -162,8 +165,8 @@
 
   // Send JSONP request
 
-  function sendJsonp(src, options) {
-    var options = options || {},
+  function sendJsonp(src, opt) {
+    var options = opt || {},
       callback_name = options.callbackName || 'callback',
       on_success = options.onSuccess || function () {},
       on_timeout = options.onTimeout || function () {},
