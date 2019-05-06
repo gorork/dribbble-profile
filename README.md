@@ -1,4 +1,7 @@
-#Dribbble Profile
+# Dribbble Profile
+
+**Attention!** *Unfortunately due to the newly introduced Dribbble API limitations, this widget is not longer active.*
+
 
 Dribbble Profile is a web module that showcases Dribbble player's profile together with his/her last shot.
 I made this widget as [my debut shot](https://dribbble.com/shots/1452717-Freebie-Dribbble-Profile-web-module) on Dribbble to give something valuable to all Dribbble players.
